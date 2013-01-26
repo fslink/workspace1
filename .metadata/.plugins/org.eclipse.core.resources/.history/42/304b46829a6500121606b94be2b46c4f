@@ -1,0 +1,35 @@
+
+
+import java.sql.*;
+public class TutoSQL {
+/**
+* @param args
+*/
+public static void main(String[] args)
+{
+
+Connection laConnection;
+Statement transmission;
+ResultSet leResultat;
+
+try{
+
+Class.forName("com.mysql.jdbc.Driver");
+
+laConnection =DriverManager.getConnection("jdbc:mysql://localhost/test","root","");
+
+
+transmission = laConnection.createStatement();
+
+leResultat = transmission.executeQuery("select * from employes");
+
+while(leResultat.next()){
+System.out.println("Nom : " + leResultat.getString("nom") + "Prenom : " + leResultat.getString("prenom"));
+}
+}catch(Exception e){
+System.out.print("Impossible de se connecter à la base de données");
+}
+}
+}
+
+

@@ -1,0 +1,60 @@
+
+/*
+* Toutes les classes de JDBC sont dans le package java.sql. Il faut donc l’importer dans
+* tous les programmes utilisant JDBC.
+*/
+import java.sql.*;
+public class TutoSQL {
+/**
+* @param args
+*/
+public static void main(String[] args)
+args){
+/* Il y a 4 classes importante à connaitre : DriverManager, Connection, ResultSet
+* et Statement (et PreparedStatement)
+* Déclaration des variables utiles à la Connection
+*/
+Connection laConnection;
+Statement transmission;
+ResultSet leResultat;
+/* Ici, obligation d’implémenter une structure de type try...catch pour nous
+* permettre de gérer les erreurs de Connection
+*/
+try{
+// Pour se connecter à une base de donnée, il faut charger le driver
+// qui fait le lien entre le programme et la base de donnée
+Class.forName("com.mysql.jdbc.Driver");
+/* On charge et on configure le driver de la base de donnée à l’aide de la
+* classe DriverManager. On insert les informations de Connection ici
+ici.
+* sql = le nom de ma base
+* root = l’utilisateur par défaut
+* "" = le mot de passe (ici j’en ai pas mis)
+*/
+laConnection =DriverManager.getConnection("jdbc:mysql://localhost/test","root","");
+
+// transmission contiendra nos requêtes et les transmettra à la base de données
+transmission = laConnection.createStatement();
+/* Exécution d’une requête : le ResultSet nous permet de parcourir les
+* informations retournées par la base de données dans le cas d’une sélection
+* de données
+*/
+leResultat = transmission.executeQuery("select * from employes");
+/* Pour afficher le resultat de la requête renvoyé par MySQL, il su
+suffit de
+* bouclé sur notre ResultSet
+ResultSet.
+*
+* leResultat.getString("nom")
+nom = champs de la table maTable
+*/
+
+while(leResultat.next()){
+System.out.println("Nom : " + leResultat.getString("nom") + "Prenom : " + leResultat.getString("prenom"));
+}
+}catch(Exception e){
+System.out.print("Impossible de se connecter à la base de données");
+}
+}
+
+

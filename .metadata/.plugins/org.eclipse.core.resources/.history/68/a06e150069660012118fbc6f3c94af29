@@ -1,0 +1,25 @@
+import java.sql.*;
+public class JDBC_connect{
+	
+	public static void main(String[] args){
+		
+		Connection laConnection;
+		Statement transmission;
+		ResultSet leResultat;
+		
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			laConnection = DriverManager.getConnection("jdbc:mysql://localhost/wsjdbcdb", "root", "ehmec");
+			transmission = laConnection.createStatement();
+			leResultat = transmission.executeQuery("SELECT * FROM employes");
+			
+			while(leResultat.next()){
+				System.out.println("Nom : " + leResultat.getString("nom") +"--" + " Prenom : " +
+						leResultat.getString("prenom"));}
+			}catch(Exception e){
+				System.out.println("Impossible de se connecter" + e);
+			}
+		
+	}
+}
+
