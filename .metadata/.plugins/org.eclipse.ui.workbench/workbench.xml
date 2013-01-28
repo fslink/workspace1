@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
 <window height="719" maximized="true" width="675" x="2205" y="249">
 <fastViewData fastViewLocation="1024"/>
@@ -37,7 +37,7 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmployeeSimpleDAO.java" partName="EmployeeSimpleDAO.java" path="/home/fslink/workspace1/JDBC_client/src/dataAccess/EmployeeSimpleDAO.java" title="EmployeeSimpleDAO.java" tooltip="JDBC_client/src/dataAccess/EmployeeSimpleDAO.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmployeeSimpleDAO.java" partName="EmployeeSimpleDAO.java" path="/home/fslink/workspace1/JDBC_client/src/dataAccess/EmployeeSimpleDAO.java" title="EmployeeSimpleDAO.java" tooltip="JDBC_client/src/dataAccess/EmployeeSimpleDAO.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JDBC_client/src/dataAccess/EmployeeSimpleDAO.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="982" selectionTopPixel="410"/>
 </editor>
@@ -55,11 +55,11 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IHM_insertion.java" partName="IHM_insertion.java" path="/home/fslink/workspace1/JDBC_client/src/client/IHM_insertion.java" title="IHM_insertion.java" tooltip="JDBC_client/src/client/IHM_insertion.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JDBC_client/src/client/IHM_insertion.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2749" selectionTopPixel="1623"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2749" selectionTopPixel="1148"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="evenements.java" partName="evenements.java" path="/home/fslink/workspace1/JDBC_client/src/client/evenements.java" title="evenements.java" tooltip="JDBC_client/src/client/evenements.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="evenements.java" partName="evenements.java" path="/home/fslink/workspace1/JDBC_client/src/client/evenements.java" title="evenements.java" tooltip="JDBC_client/src/client/evenements.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JDBC_client/src/client/evenements.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="370" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="428" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -68,11 +68,7 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Errors"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="948" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="964" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -196,16 +192,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JDBC_client/src/client/evenements.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JDBC_client/src/dataAccess/EmployeeDAO.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JDBC_client/src/dataAccess/EmployeeSimpleDAO.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JDBC_client/src/client/IHM_insertion.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JDBC_client/src/dataAccess/EmployeeSimpleDAO.java"/>
 </editors>
-<item historyLabel="IHM_insertion.java" index="1">
-<position info="not_deleted" x="2752" y="0"/>
-</item>
-<item historyLabel="evenements.java" index="2">
-<position info="not_deleted" x="428" y="0"/>
-</item>
-<item historyLabel="EmployeeSimpleDAO.java" index="4">
-<position info="not_deleted" x="1165" y="0"/>
-</item>
 <item historyLabel="evenements.java" index="2">
 <position info="not_deleted" x="428" y="0"/>
 </item>
@@ -344,8 +333,17 @@
 <item historyLabel="IHM_insertion.java" index="1">
 <position info="not_deleted" x="2749" y="0"/>
 </item>
-<item active="true" historyLabel="evenements.java" index="2">
+<item historyLabel="evenements.java" index="2">
 <position info="not_deleted" x="428" y="0"/>
+</item>
+<item historyLabel="IHM_insertion.java" index="5">
+<position info="not_deleted" x="2749" y="0"/>
+</item>
+<item historyLabel="evenements.java" index="2">
+<position info="not_deleted" x="370" y="0"/>
+</item>
+<item active="true" historyLabel="EmployeeSimpleDAO.java" index="6">
+<position info="not_deleted" x="982" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
