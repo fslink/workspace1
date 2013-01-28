@@ -1,0 +1,60 @@
+package dataAccess;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.DriverManager;
+import dataAccess.domain.Employee;
+import dataAccess.EmployeeDAO;
+
+
+public class EmployeeSimpleDAO implements EmployeeDAO {
+	
+	private Connection laConnection;
+	private Statement transmission;
+	//private ResultSet leResultat;
+	private String nom;
+	private String prenom;
+	private Employee empl;
+   
+	public EmployeeSimpleDAO(){
+		
+		
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			laConnection = DriverManager.getConnection("jdbc:mysql://localhost/wsjdbcdb", "root", "ehmec");
+			transmission = laConnection.createStatement();
+			
+			}catch(Exception e){
+				System.out.println("erreur dans l'obtention de la connexion le prog va s'arrêter"+ e);
+			}
+	}
+	
+	public void closeConnection(){
+		try{
+			laConnection.close();
+		}catch(Exception e){
+			System.out.println("fermeture de la base échoué"+ e);
+		}
+	}
+	
+	public void addEmployee (Employee em){
+		this.empl = em;
+		nom = empl.getName();
+		prenom = empl.getFirstname();
+		
+		try{
+			transmission.executeUpdate("INSERT INTO employees (nom, prenom) VALUES("+nom+", "+prenom+";");
+		}catch(Exception e){
+			System.out.println("erreur lors de l'insertion"+ e);
+		}
+		
+					
+	}
+	
+	public void removeEmployee(Employee em){
+		
+	}
+	
+
+	
+}

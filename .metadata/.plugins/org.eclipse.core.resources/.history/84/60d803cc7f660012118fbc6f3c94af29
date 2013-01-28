@@ -1,0 +1,12 @@
+package dataAccess;
+import dataAccess.domain.Employee;
+import java.sql.SQLException;
+import java.awt.List;
+
+public interface EmployeeDAO {
+	public void addEmployee(Employee e);
+	public void removeEmployee(Employee e);
+	public List<Employee> listAllEmployees();
+	public void closeConnection();
+
+}
