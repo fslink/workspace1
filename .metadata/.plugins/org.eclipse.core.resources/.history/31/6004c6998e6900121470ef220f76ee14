@@ -1,0 +1,35 @@
+package client;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import dataAccess.EmployeeSimpleDAO;
+import dataAccess.domain.Employee;
+
+class evenements extends MouseAdapter {
+	
+	EmployeeSimpleDAO dao;
+	Employee empl;
+	
+	public evenements(String N, String F){
+		this.empl = new Employee(N, F);
+		
+		
+		try{
+			System.out.println("nom : "+empl.getName());
+			System.out.println("prenom : "+empl.getFirstname());
+		}catch(Exception e){
+			System.out.println("erreur"+e);
+		}
+		
+		
+		
+	}
+
+	
+	public void mouseClickedValider(MouseEvent e){
+		dao = new EmployeeSimpleDAO();
+		dao.addEmployee(empl);
+	}
+		
+	
+
+}

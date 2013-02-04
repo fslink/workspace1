@@ -1,5 +1,4 @@
 package client;
-import javax.swing.*;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.GridBagConstraints;
@@ -10,11 +9,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import java.awt.Color;
 import java.awt.event.MouseListener;
-import client.evenements;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import dataAccess.domain.Employee;
+import dataAccess.EmployeeSimpleDAO;
 
 class IHM_insertion extends JFrame{
 
@@ -27,6 +26,8 @@ class IHM_insertion extends JFrame{
 	JButton button_annuler = new JButton("Annuler");
 	String N;
 	String F;
+	Employee empl;
+	EmployeeSimpleDAO dao;
 	
 	// Gestion de la répartition des composants
 	
@@ -34,11 +35,7 @@ class IHM_insertion extends JFrame{
 	GridBagConstraints c;
 	Container pane = getContentPane();
 	
-	class ListenerQuitter implements ActionListener
-	{ public void actionPerformed(ActionEvent e)
-	  {   System.exit(0);
-	  }
-	}
+	
 	
 	
 	public IHM_insertion(){
@@ -112,11 +109,24 @@ class IHM_insertion extends JFrame{
 		c.weighty = 1;
 		Grid.setConstraints(button_valider, c);
 		
-		
+		button_valider.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt){
+				N = textf_nom.getText();
+				F = textf_prenom.getText();
+				Employee empl = new Employee(N, F);
+				
+				try{
+					
+					EmployeeSimpleDAO dao = new EmployeeSimpleDAO();
+					dao.addEmployee(empl);
+					
+				}catch(Exception e){
+					System.out.println("erreur es la suivante" +e);}
+			}
+		});
 		
 		//event insertion
-		evenements event_insertion = new evenements(textf_nom.getText(), textf_prenom.getText());
-		button_valider.addMouseListener(event_insertion);
+		
 		pane.add(button_valider);
 		
 		c = new GridBagConstraints();
@@ -131,10 +141,17 @@ class IHM_insertion extends JFrame{
 		Grid.setConstraints(button_annuler, c);
 		//event quitter
 		
-		button_annuler.addActionListener(new ListenerQuitter());
+		button_annuler.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt){
+				System.exit(0);
+			}
+		});
+		
 		pane.add(button_annuler);
 		
 		
 		
 	}
+	
+	
 }

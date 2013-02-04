@@ -1,0 +1,17 @@
+package client;
+
+/*Le simulateur instancie la classe Automate et la classe Cad. 
+ * Il gère les choix de l'utilisateur, l'affichage de la grille et le timer
+ */
+
+public class Simulateur {
+	
+	int pasTotal;
+	int pasEnCours;
+	int indiceDeRapidite;
+	
+	
+	
+	
+
+}
